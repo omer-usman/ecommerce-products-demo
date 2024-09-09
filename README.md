@@ -31,7 +31,7 @@ This project is an E-commerce Product Management application built with React, R
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/ecommerce-product-management.git
+git clone https://github.com/omer-usman/ecommerce-products-demo.git
 cd ecommerce-product-management
 ```
 
