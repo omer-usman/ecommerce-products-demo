@@ -1,50 +1,118 @@
-# React + TypeScript + Vite
+GitHub Copilot: # E-commerce Product Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an E-commerce Product Management application built with React, Redux, and Ant Design. It allows users to manage products, including adding, editing, and deleting products. Users can also upload product images and store them locally.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Authentication (Sign In, Sign Up, Forgot Password)
+- Add, Edit, and Delete Products
+- Upload and Display Product Images
+- User-specific Product Management
+- Responsive Design
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React
+- Redux
+- Ant Design
+- TypeScript
+- UUID
+- React Router
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/ecommerce-product-management.git
+cd ecommerce-product-management
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
+
+### Running the Application
+
+1. Start the development server:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+2. Open your browser and navigate to `http://localhost:3000`.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── SignIn.tsx
+│   ├── SignUp.tsx
+│   ├── ForgotPassword.tsx
+│   ├── ProductManagement.tsx
+│   ├── SignIn.css
+│   ├── SignUp.css
+│   └── ProductManagement.css
+├── redux/
+│   ├── productSlice.ts
+│   ├── userSlice.ts
+│   └── store.ts
+├── App.tsx
+├── App.css
+├── index.tsx
+└── ...
+```
+
+### Components
+
+- **SignIn**: Handles user sign-in.
+- **SignUp**: Handles user sign-up.
+- **ForgotPassword**: Handles password recovery.
+- **ProductManagement**: Main component for managing products.
+
+### Redux
+
+- **productSlice**: Contains actions and reducers for product management.
+- **userSlice**: Contains actions and reducers for user authentication.
+- **store**: Configures the Redux store.
+
+## Styling
+
+The application uses Ant Design for UI components and custom CSS for additional styling. Each component has its own CSS file for modular styling.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgements
+
+- [Ant Design](https://ant.design/)
+- [Redux](https://redux.js.org/)
+- [React Router](https://reactrouter.com/)
+
+---
+
+Feel free to customize this README file according to your project's specifics and requirements.
